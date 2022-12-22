@@ -27,7 +27,7 @@ const resetar = () => {
 }
 
 const inicio = () => {
-  flag = setInterval(watch, 1)
+  flag = setInterval(watch, 1000)
 }
 
 const finish = () => {
