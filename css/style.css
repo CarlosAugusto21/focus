@@ -174,7 +174,7 @@ article {
 }
 
 #todo-list {
-  width: 100%;
+  width: 80%;
 }
 .todo {
   display: flex;
@@ -197,6 +197,7 @@ article {
 
 .done {
   text-decoration: line-through;
+  font-style: italic;
 }
 
 .container-todo button:hover {
@@ -213,11 +214,15 @@ article {
     margin: 10rem auto 0;
   }
 
-  .addTalk {
+  .addTalk, .edit {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  #todo-list {
+    width: 70%;
   }
 
 }
@@ -229,6 +234,7 @@ article {
     width: 450px;
     
   }
+
 
   .container {
     width: 400px;
@@ -256,7 +262,6 @@ article {
   h2 {
     font-size: 31px;
   }
-
   .todo {
     display: flex;
     justify-content: center;
