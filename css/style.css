@@ -211,7 +211,7 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10rem auto 0;
+    margin: 2rem auto 0;
   }
 
   .addTalk, .edit {
@@ -235,6 +235,10 @@ article {
     
   }
 
+  section {
+    height: 280px;
+  }
+
 
   .container {
     width: 400px;
@@ -254,6 +258,10 @@ article {
   article,
   section {
     width: 345px;
+  }
+
+  section {
+    height: 250px;
   }
   article {
     margin-bottom: 10px;
@@ -275,6 +283,36 @@ article {
     flex: 1;
     font-size: 12px;
   }
+}
+
+@media (max-width: 400px) {
+  article,
+    section {
+      width: 300px;
+    }
+
+    section {
+      height: 250px;
+    }
+
+    .edit {
+      width: 290px;
+    }
+    h2 {
+      font-size: 26px;
+    }
+
+    #todo-list {
+      width: 60%;
+    }
+
+    .container-todo input {
+      width: 200px;
+    }
+
+    .edit button {
+      width: 30px;
+    }
 }
 
 
