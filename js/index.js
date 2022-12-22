@@ -1,8 +1,9 @@
 let sec = 60
-let min = 25
+let min = 24
 let flag
 const today = document.querySelector('.data')
 const data = new Date()
+const timer = document.querySelector('.watch')
 
 /* POMODORO */
 const start = () => {
@@ -20,13 +21,20 @@ const cliqueBtn = () => {
 
 const resetar = () => {
   clearInterval(flag)
-  min = 25
+  min = 24
   sec = 60
   document.getElementById('watch').innerText = `25:00`
 }
 
 const inicio = () => {
-  flag = setInterval(watch, 1000)
+  flag = setInterval(watch, 1)
+}
+
+const finish = () => {
+  clearInterval(flag)
+  min = 24
+  sec = 60
+  document.getElementById('watch').innerText = `Volte em 5 minutos`
 }
 
 const watch = () => {
@@ -35,7 +43,14 @@ const watch = () => {
     min--
     sec = 60
   }
+
   document.getElementById('watch').innerText = twodg(min) + ':' + twodg(sec)
+
+  if (min === 0) {
+    if (sec === 1) {
+      finish()
+    }
+  }
 }
 
 const twodg = num => {
