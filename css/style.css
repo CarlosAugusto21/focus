@@ -127,6 +127,9 @@ article {
 .addTalk, .edit {
   width: 320px;
   padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .edit {
